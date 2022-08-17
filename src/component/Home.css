@@ -1,0 +1,47 @@
+.main{
+    background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/apple-airpods-max-1607550567.gif);
+    height:900px;
+    background-size:cover; 
+    margin-top: -3%;
+}
+.vr{
+    height: 60px;
+    width: 60px;
+    border-radius: 60%;            
+}
+.nv{
+    padding-left: 4%; 
+
+}
+.nav{
+    padding-right:30px;
+    font-size: larger;
+    color: #000000;           
+}
+.navbar{
+    background-color: rgba(243,222,217,255);
+    box-shadow: 10px 3px 50px rgb(77, 79, 80);
+}
+.nv-1{
+    color: #053947;
+    font-size:40px;
+    font-weight: 700;
+}
+.sec1{
+text-align: center;
+padding-top: 7%;
+padding-right: 67%;
+color: black;
+font-weight: 700;
+}
+.sec2{
+text-align: center;
+padding-top:24% ;
+padding-left: 65%;
+color: black;
+}
+.sp1{
+font-size: 55px;
+padding: 3%;
+color: crimson;
+}

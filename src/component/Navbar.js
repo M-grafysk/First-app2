@@ -6,13 +6,7 @@ const Navbar = () => {
   return (
     <>
       <>
-  <meta charSet="UTF-8" />
-  <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> Walton_home</title>
- 
-  <style dangerouslySetInnerHTML={{ __html: "\n        \n    " }} />
-  <div className="navbar">
+      <div className="navbar">
     <div className="nv navbar-brand">
       <img className="vr" src="src\component\img\icon.jpg" alt="Luv" />
       <h2 className="nv-1">WALTON</h2>
@@ -41,6 +35,7 @@ const Navbar = () => {
       </ul>
     </div>
   </div>
+  
   <div className="main">
     <div className="section">
       <h1 className="sec1">

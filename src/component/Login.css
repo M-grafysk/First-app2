@@ -1,5 +1,5 @@
-.loginpage {
-    background-color: rgba(3, 3, 34, 0.991);
+.loginpage  {
+    background-color: rgba(3, 3, 34, 0.795);
     padding-bottom: 2.5%;
 }
 .c1{
@@ -7,56 +7,16 @@
      background-image: url(https://images.hdqwalls.com/wallpapers/daft-punk-minimalism-3-pic.jpg); 
     
     background-size: cover;
-    -webkit-box-shadow: 0px 0px 82px -20px rgba(255,255,255,0.73);
-    -moz-box-shadow: 0px 0px 82px -20px rgba(255,255,255,0.73);
-    box-shadow: 0px 0px 82px -20px rgba(255,255,255,0.73);
+    background-position: center;
+    min-height: 300px;
+    border-radius: 8px 0px 0px 8px;
+}
 
-}
-.myinput{
-    border-radius: 20px;
-    border-style: none;
-    margin-top:-15px;
-    background-color: #f3e7eb;
-    padding-right:50px;
-    width: 22%;
-    -webkit-box-shadow: inset 0px 11px 107px -55px rgba(250,175,55,1);
--moz-box-shadow: inset 0px 11px 107px -55px rgba(250,175,55,1);
-box-shadow: inset 0px 11px 107px -55px rgba(250,175,55,1);  
-}
-.bgImg{
-    
-}
-.ip1{
-    
-    font-weight: 700;
-     background: -webkit-linear-gradient(147deg, #f9e03c 6%, #FF2525 100%); 
-     -webkit-background-clip: text; 
-     -webkit-text-fill-color: transparent; 
-    background-color: #FFE53B;
-
-    margin-bottom: 40px;
-    font-size: 65px;
-}
-.username,.password,.email{
-    padding-bottom: 25px;
-    padding-right: 175px;
-    color: rgb(218, 152, 65);
-    font-weight: 400;
-}
-.fp{
-    font-size: smaller;
-    padding-left: 155px;
-    color: rgb(255, 250, 250);
-    margin-top: -33px;
-    padding-bottom: 20px;
-}
-.li{
-    background-color: #FFE53B;
-    background-image: -webkit-linear-gradient(147deg, #FFE53B 6%, #FF2525 100%);
-    background-image: -moz-linear-gradient(147deg, #FFE53B 6%, #FF2525 100%);
-    background-image: -o-linear-gradient(147deg, #FFE53B 6%, #FF2525 100%);
-    background-image: linear-gradient(147deg, #FFE53B 6%, #FF2525 100%);
-    color: black;
-    font-weight: 700;
-
+.myinput {
+    border: none;
+    border-bottom: black solid 2px;
+    outline: none;
+    margin-top: -15px;
+    border-radius: 0px;
+    padding-right: 50px;
 }

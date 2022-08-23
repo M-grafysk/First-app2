@@ -1,96 +1,91 @@
 import React from "react";
 import {Formik} from "formik"
+import "./addmusic.css"
 import Swal from "sweetalert2";
 export const Addmusic = () => {
-    // create a function for form submit events
-    const userSubmit=async(formdata)=>{
+      const url ="http://localhost:5000";
+    
+      const loginSubmit= async (formdata)=>{
         console.log(formdata);
-        // code to save data to database
-
-
-        //to create a request 
-        // url
-        // request method
-        // data to send 
-        // data format
-          
-
-        const response=await fetch('http://localhost:5000/user/add',{
-            method:'POST',
-            body: JSON.stringify(formdata),
-            headers:{
-                'content-type':'application/json'
-            }
-        });
-        console.log(response.status);
-        if (response.status===200){
-            Swal.fire({
-                icon: "success",
-                title:" nice",
-                text:" you are hired"
-            })
-        }else{
-            Swal.fire({
-                icon:"error",
-                title:"ooppssiiii",
-                text:"you are not hired"
-            })
+    
+      const res = await fetch(url+'/music/add',{
+        method:'POST',
+        body:JSON.stringify(formdata),
+        headers:{
+          'Content-Type' :'application/JSON'
         }
+      })
+    
+      if(res.status===200){
+        Swal.fire({
+          icon:"success",
+          title:"done",
+          text:"you are logged in"
+        })
+      }
+      else if(res.status===400){
+        Swal.fire({
+          icon:"error",
+          title:"Error",
+          text:"email or password is incorrect"
+        })
+      }
+      else {
+        Swal.fire({
+          icon:"error",
+          title:"Error",
+          text:"something went wrong"
+        })
+      }
     }
   return (
-    <div className='d-flex justify-content-center align-items-center bg-warning' style={{height : '90vh'}}>
-    <div className="container">
-    <div className="card">
-        <div className="row">
-            <div className="col-md-4">
-                <div style={{background: "url('https://i.ytimg.com/vi/L9ZYdShgtPE/maxresdefault.jpg')", height: '100%'}}></div>
-            </div>
-            <div className="col-md-8">
-            <div className="card-body">
-            <h3 className='text-center'>Add MUSIC Here</h3>
-            <hr />
+        <div className='loginpagee '>
+        <div className='container'>
+        <div className='c2 card '>    
+        <div className='card-body '>
+          <h1 className='ip2 text-center'>ADD MUSIC HERE</h1>
             <Formik initialValues={{
                 singername:"",
                 title:"",
-                comanyname:"",
+                companyname:"",
                 lyrics:"",
                 date:"",
                 thumbnail:"",
                 audio:""
             }}
-            onSubmit={userSubmit}>
+            onSubmit={loginSubmit}>
             
                 {({values, handleChange,handleSubmit})=> (
                     <form onSubmit={handleSubmit}>
-                    <div className="col-md">
+                    <div className="lab2  col-md">
                         <label>singername</label>
-                        <input className='form-control' values={values.username} onChange={handleChange} id="singername" />
-                    </div> 
-                    <div className="col-md">
-                        <label>title</label>
-                        <input className='form-control' values={values.email} onChange={handleChange} id="title"/>
+                        <input type="text" className='form-control' value={values.username} onChange={handleChange} id="singername" />
+                    </div>  
+                    <div className="lab2 col-md">
+                        <label >title</label>
+                        <input type="text" className='form-control' value={values.title} onChange={handleChange} id="title"/>
                     </div>
-                    <div className="col-md">
-                        <label>companyname</label>
-                        <input className='form-control' values={values.email} onChange={handleChange} id="companyname"/>
+                    <div class Name="lab2 col-md">
+                        <label >companyname</label>
+                        <input type="text" className='form-control' value={values.companyname} onChange={handleChange} id="companyname"/>
                     </div>
-                    <div className="col-md">
-                        <label>lyrics</label>
-                        <input className='form-control' values={values.email} onChange={handleChange} id="lyrics"/>
+                    <div className="lab2 col-md">
+                        <label >lyrics</label>
+                        <input type="text" className='form-control' values={values.lyrics} onChange={handleChange} id="lyrics"/>
                     </div>
-                    <div className="col-md">
-                        <label>date</label>
-                        <input className='form-control' values={values.email} onChange={handleChange} id="date"/>
+                    <div className="lab2 col-md">
+                        <label >date</label>
+                        <input type="date" className='form-control' value={values.date} onChange={handleChange} id="date"/>
                     </div>
-                    <div className="col-md">
-                        <label>thumbnail</label>
-                        <input className='form-control' values={values.password } onChange={handleChange} id="thumbnail" />
+                    <div className="lab2 col-md">
+                        <label >thumbnail</label>
+                        <input type="file" className='form-control' value={values.thumbnail} onChange={handleChange} id="thumbnail" />
                     </div>
-                    <div className="col-md">
-                        <label>audio</label>
-                        <input className='form-control' values={values.username} onChange={handleChange} id="audio"/>
+                    <div className="lab2 col-md">
+                        <label >audio</label>
+                        <input type="file" className='form-control' value={values.audio} onChange={handleChange} id="audio"/>
                     </div>
-                    <button className="btn btn-danger">SUBMIT</button>
+                    <button className="btn btn-warning">SUBMIT</button>
                     
                 </form>
 
@@ -101,8 +96,7 @@ export const Addmusic = () => {
             </div>
         </div>
     </div>
-    </div>   
-    </div>
+    
 
     
 

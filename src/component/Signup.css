@@ -1,0 +1,63 @@
+.img1{
+    /* background-image: url(https://c4.wallpaperflare.com/wallpaper/593/802/551/minimalism-music-background-daft-punk-wallpaper-preview.jpg); */
+    /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo5E1s1up7mgl3cBIOoWMjoa0Lc8Qi4XMPLVxX9VyXDyRQcBAAhsHYhouELjmWD-dQFZ4&usqp=CAU);  */
+      background-image: url(https://i.pinimg.com/736x/b6/dc/b2/b6dcb270eae6458889dc4f9b3d35cb56.jpg); 
+    /* background-image: url(https://www.desktopbackground.org/download/360x640/2010/08/09/61526_music-hd-wallpaper-music-wallpapers-hd_1366x768_h.jpg);  */
+    height:100%;
+    background-repeat: no-repeat;
+    -webkit-box-shadow: 0px 0px 82px -20px rgba(255,255,255,0.73);
+    -moz-box-shadow: 0px 0px 82px -20px rgba(255,255,255,0.73);
+    box-shadow: 0px 0px 82px -20px rgba(255,255,255,0.73); 
+    
+}
+.container{
+    padding-top: 5%;
+    
+}
+.cc{
+    /* background-image: linear-gradient( 178.9deg,  rgb(218, 115, 157) 5.1%, rgba(229,113,159,1) 109.3% ); */
+    /* background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);  */
+    margin-left: -45px;
+    background-color: black;
+    
+
+}
+.t1{
+    color: rgb(8, 8, 53);
+    font-weight: 700;
+    background: -webkit-linear-gradient(147deg, #f9e03c 6%, #FF2525 100%); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+   background-color: #FFE53B;
+
+}
+.t2,.t3,.t4{
+    padding-bottom: 15px;
+    font-weight: 600;
+    /* color: rgb(56, 2, 62); */
+    color: rgb(218, 152, 65);
+    font-size: large
+}
+.input1{
+    margin-bottom: 5%;
+    padding-bottom: 2%;
+    border-radius: 20px;
+    width: 75%;
+    
+}
+.btn2{
+    background-color: #FFE53B;
+    background-image: -webkit-linear-gradient(147deg, #FFE53B 6%, #FF2525 100%);
+    background-image: -moz-linear-gradient(147deg, #FFE53B 16%, #FF2525 100%);
+    background-image: -o-linear-gradient(147deg, #FFE53B 16%, #fa1414 100%);
+    background-image: linear-gradient(147deg, #FFE53B 10%, #ef1c1c 100%);
+    color: black;
+    font-weight: 700;
+    margin-left: 70%;
+    
+}
+.bg{
+    background-color: rgba(3, 3, 34, 0.991);
+    padding-bottom: 5.3%;
+}
+.cc{}

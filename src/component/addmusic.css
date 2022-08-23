@@ -1,0 +1,24 @@
+.c2{
+    /* background-image: url();  */
+    background-image: url(https://img2.goodfon.com/wallpaper/nbig/4/7c/kaseta-makro-fon.jpg); 
+    background-repeat: no-repeat;
+    background-color: black;
+    margin-top: -40x;
+
+}
+.loginpagee{
+    background-color: black;
+}
+.ip2{
+    margin-bottom: 50%;
+    font-weight: 700;
+    background: -webkit-linear-gradient(147deg, #f9e03c 6%, #FF2525 100%); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+   background-color: #FFE53B;
+   font-size: 60px;
+
+}.lab2{
+    width: 50%;
+    margin-left: 300px;
+}

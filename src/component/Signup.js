@@ -1,6 +1,7 @@
 import React from "react";
 import {Formik} from "formik"
 import Swal from "sweetalert2";
+import "./Signup.css"
 export const Register = () => {
     // create a function for form submit events
     const userSubmit=async(formdata)=>{
@@ -27,61 +28,55 @@ export const Register = () => {
             Swal.fire({
                 icon: "success",
                 title:" nice",
-                text:" you are hired"
+                text:" signup done"
             })
         }else{
             Swal.fire({
                 icon:"error",
                 title:"ooppssiiii",
-                text:"you are not hired"
+                text:"invalid"
             })
         }
     }
   return (
-    <div className='d-flex justify-content-center align-items-center bg-warning' style={{height : '90vh'}}>
-    <div className="container">
-    <div className="card">
-        <div className="row">
-            <div className="col-md-4">
-                <div style={{background: "url('https://i.ytimg.com/vi/L9ZYdShgtPE/maxresdefault.jpg')", height: '100%'}}></div>
-            </div>
-            <div className="col-md-8">
-            <div className="card-body">
-            <h3 className='text-center'>Register Here to Continue</h3>
-            <hr />
+    <div className="bg">
+    <div className='m1 d-flex justify-content-center align-items-center  '>
+        <div className="container ">
+            <div className="card">
+                <div className="row">
+                    <div className="col ">
+                        <div className="img1"> </div>               
+                    </div>
+                        <div className="cc col">
+                            <div className="card-body">
+                                <h2 className='t1 text-center'>Register Here to Continue</h2>
+                            <hr />
+                            
             <Formik initialValues={{
                 username:"",
                 email:"",
                 password:"",
-                age:""
+            
             }}
             onSubmit={userSubmit}>
-            
                 {({values, handleChange,handleSubmit})=> (
                     <form onSubmit={handleSubmit}>
-                    <div className="col-md">
-                        <label>userName</label>
-                        <input className='form-control' values={values.username} onChange={handleChange} id="username" />
+                    <div className="t2 col-md">
+                        <label>UserName</label>
                     </div> 
-                    <div className="col-md">
-                        <label>email</label>
-                        <input className='form-control' values={values.email} onChange={handleChange} id="email"/>
+                        <input className='input1 form-control' values={values.username} onChange={handleChange} id="username" />
+                    <div className="t3 col-md">
+                        <label>Email</label>
                     </div>
-                    <div className="col-md">
-                        <label>phone number</label>
-                        <input className='form-control' values={values.password } onChange={handleChange} id="password" />
+                        <input className='input1 form-control' values={values.email} onChange={handleChange} id="email"/>
+                    <div className="t4 col-md">
+                        <label>Password</label>
                     </div>
-                    <div className="col-md">
-                        <label>age</label>
-                        <input className='form-control' values={values.username} onChange={handleChange} id="age"/>
-                    </div>
-                    <button className="btn btn-danger">signup</button>
-                    
+                        <input className='input1 form-control' values={values.password } onChange={handleChange} id="password" />
+                    <button className='btn2 btn btn-md bg-dark' >REGISTER</button>
                 </form>
-
-                )}
+                  )}
             </Formik>
-            
             </div>    
             </div>
         </div>
@@ -90,7 +85,7 @@ export const Register = () => {
     </div>
 
     
-
+    </div>
   );
 };
 export default Register;

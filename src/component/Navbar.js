@@ -34,7 +34,7 @@ const Navbar = () => {
         <a href="#"> FAQ</a>
       </ul>
       <ul>
-      <NavLink className="btn btn-primary" to="/loginpage"> Login </NavLink>
+      <NavLink className="btn btn-primary" to="/loginpage"> login</NavLink>
       </ul>
       <ul>
         <NavLink className="btn btn-primary" to="/signuppage "> Signup </NavLink>

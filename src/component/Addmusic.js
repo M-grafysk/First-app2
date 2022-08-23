@@ -1,8 +1,10 @@
-import React from "react";
+import React , {useState}from "react";
 import {Formik} from "formik"
 import "./addmusic.css"
 import Swal from "sweetalert2";
 export const Addmusic = () => {
+  const [image, setImage] = useState("");
+  const [musicFile, setMusicFile] = useState("");
       const url ="http://localhost:5000";
     
       const loginSubmit= async (formdata)=>{
@@ -38,6 +40,39 @@ export const Addmusic = () => {
         })
       }
     }
+    const uploadimage = (event) => {
+      const formdata = new FormData();
+      formdata.append("file", event.target.files[0]);
+  
+      const reqOptions = {
+        method: "POST",
+        body: formdata,
+      };
+  
+      fetch(url + "util/addfile", reqOptions)
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          setImage(event.target.files[0].name);
+        });
+    };
+  
+    const uploadfile = (event) => {
+      const formdata = new FormData();
+      formdata.append("file", event.target.files[0]);
+  
+      const reqOptions = {
+        method: "POST",
+        body: formdata,
+      };
+  
+      fetch(url + "util/createfile", reqOptions)
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          setMusicFile(event.target.files[0].name);
+        });
+    };
   return (
         <div className='loginpagee '>
         <div className='container'>
@@ -81,6 +116,14 @@ export const Addmusic = () => {
                         <label >thumbnail</label>
                         <input type="file" className='form-control' value={values.thumbnail} onChange={handleChange} id="thumbnail" />
                     </div>
+                    <input
+              
+              onChange={uploadimage}
+              type="file"
+              fullwidth
+              className="form-control mt-4 mx-0"
+              title="Select heroimage"
+            required/>
                     <div className="lab2 col-md">
                         <label >audio</label>
                         <input type="file" className='form-control' value={values.audio} onChange={handleChange} id="audio"/>

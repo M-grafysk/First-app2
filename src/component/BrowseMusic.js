@@ -3,7 +3,7 @@ import { InputAdornment, Typography, Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import app_config from "../config";
-import "../../stylesheets/browseorg.css";
+import "./browsemusic.css"
 const BrowseSlides = () => {
   const [datalist, setDatalist] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -47,7 +47,7 @@ const BrowseSlides = () => {
         }) => (
           <div key={_id} class="col-md-12 col-lg-4 mb-4 mb-lg-0 ">
           <div class='container cont' id='container'>
-
+          <div className="card1 card">
   <div class='card-wrapper'>
     <div class='arrow' id='previous'><i class="fa fa-arrow-left" aria-hidden="true"></i></div>
     <div class='arrow' id='next'><i class="fa fa-arrow-right" aria-hidden="true"></i></div>
@@ -56,7 +56,7 @@ const BrowseSlides = () => {
       <div class='user-image'>
       <NavLink className="ripple" to={"/main/pptviewer/" + _id}>
                 <img
-                  src={url + de}
+                  src={url + thumbnail}
                   class="card-img-top"
                   alt="Laptop"
                 />
@@ -66,16 +66,17 @@ const BrowseSlides = () => {
         {/* <div class='add-button'>+</div> */}
         <p class="small">
                     <a href="#!" class="text-muted">
-                      {link}
+                      {singername}
                     </a>
                   </p>
-                  <h5 class="mb-0 username">{organisationname}</h5>
+                  <h5 class="mb-0 username">{title}</h5>
       </div>
         
-      <button Click={e=>navigate("/main/orgdetail/" + _id)} variant="contained">Click For Full Details</button>
+      {/* <button Click={e=>navigate("/main/orgdetail/" + _id)} variant="contained">Click For Full Details</button> */}
                 
       </div>
-      </div>
+      </div></div>
+
       </div>
       </div>
   
@@ -91,7 +92,7 @@ const BrowseSlides = () => {
               
      
     <div style={{ background: "#eee", height: "200vh" }}>
-    <img class="banner" src="  https://nasscom.in/sites/default/files/Landing_page_banner/events_listing.jpg"></img>
+    <img class="banner" src="https://wallpaperaccess.com/full/2039818.jpg"></img>
     <div class=" row ground">
                 <div class="col-md-5 mb-3">
                 <div class="form-outline form">
@@ -145,9 +146,11 @@ const BrowseSlides = () => {
       {/* </header> */}
       <div className="container">
         <div className="row">{displayData()}</div>
+       
       </div>
     </div>
     </div>
+    
   );
 };
 
